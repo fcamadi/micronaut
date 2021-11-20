@@ -5,6 +5,7 @@ build/
 target/
 out/
 .idea
+.idea/libraries/*
 *.iml
 *.ipr
 *.iws
