@@ -29,4 +29,11 @@ class HelloWorldControllerTest {
         assertEquals(HttpStatus.OK,response.getStatus());
     }
 
+
+    @Test
+    void helloWorldEndpointRespondsWithProperContentAndStatusCode_ForAGivenName() {
+        var response = httpClient.toBlocking().exchange("/hello/v1/Jack", String.class);
+        assertEquals("Hello Jack",response.body());
+        assertEquals(HttpStatus.OK,response.getStatus());
+    }
 }
