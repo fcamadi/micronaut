@@ -1,5 +1,7 @@
 package org.francd.controller;
 
+import io.micronaut.http.HttpResponse;
+import io.micronaut.http.HttpResponseWrapper;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -20,9 +22,17 @@ public class HelloWorldController {
         return helloWorldService.sayHelloWorld();
     }
 
+    /*
     @Get(value = "/{name}", produces = MediaType.TEXT_PLAIN)
     public String helloToName(@PathVariable(name = "name") String name) {
         return helloWorldService.sayHelloToName(name);
     }
+    */
+
+    @Get(value = "/{name}", produces = MediaType.TEXT_PLAIN)
+    public HttpResponse helloToName2(@PathVariable(name = "name") String name) {
+        return  HttpResponse.ok(helloWorldService.sayHelloToName(name));
+    }
+
 
 }
