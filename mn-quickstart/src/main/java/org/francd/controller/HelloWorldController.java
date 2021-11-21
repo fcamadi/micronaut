@@ -1,7 +1,7 @@
 package org.francd.controller;
 
+import io.micronaut.context.annotation.Property;
 import io.micronaut.http.HttpResponse;
-import io.micronaut.http.HttpResponseWrapper;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -12,6 +12,9 @@ import org.francd.service.HelloWorldService;
 public class HelloWorldController {
 
     private HelloWorldService helloWorldService;
+
+    @Property(name = "hello.default.message")
+    private String helloFromConfig;
 
     public HelloWorldController(HelloWorldService helloWorldService) {
         this.helloWorldService = helloWorldService;
@@ -34,5 +37,9 @@ public class HelloWorldController {
         return  HttpResponse.ok(helloWorldService.sayHelloToName(name));
     }
 
+    @Get(uri = "/default", produces = MediaType.TEXT_PLAIN)
+    public String defaultHelloMessage() {
+        return helloFromConfig;
+    }
 
 }

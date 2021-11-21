@@ -3,3 +3,8 @@ micronaut:
     name: mnQuickstart
   server:
     port: ${SERVER_PORT:8090}
+
+
+hello:
+  default:
+    message: "Default hello message here"
