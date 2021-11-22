@@ -8,3 +8,6 @@ micronaut:
 hello:
   default:
     message: "Default hello message here"
+  translation:
+    de: "Hallo Welt"
+    es: "Hola mundo"

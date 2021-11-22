@@ -42,4 +42,10 @@ public class HelloWorldController {
         return helloFromConfig;
     }
 
+
+    @Get(value = "/language/{language}", produces = MediaType.TEXT_PLAIN)
+    public String helloWorldLanguages(@PathVariable(name = "language") String language) {
+        return helloWorldService.sayHelloWorldInLanguage(language);
+    }
+
 }

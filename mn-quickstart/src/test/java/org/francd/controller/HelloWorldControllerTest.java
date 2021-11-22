@@ -47,4 +47,12 @@ class HelloWorldControllerTest {
         assertEquals(helloFromConfig,response.body());
         assertEquals(HttpStatus.OK,response.getStatus());
     }
+
+
+    @Test
+    void helloWorldEndpointRespondsWithProperContentAndStatusCode_InLanguage() {
+        var response = httpClient.toBlocking().exchange("/hello/v1/language/es", String.class);
+        assertEquals("Hola mundo",response.body());
+        assertEquals(HttpStatus.OK,response.getStatus());
+    }
 }
