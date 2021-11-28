@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/mn-quickstart/mn-quickstart.iml" filepath="$PROJECT_DIR$/mn-quickstart/mn-quickstart.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mn-stock-broker/mn-stock-broker/mn-stock-broker.iml" filepath="$PROJECT_DIR$/mn-stock-broker/mn-stock-broker/mn-stock-broker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mn-stock-broker/mn-stock-broker.iml" filepath="$PROJECT_DIR$/mn-stock-broker/mn-stock-broker.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/workspaceMicronaut.iml" filepath="$PROJECT_DIR$/.idea/workspaceMicronaut.iml" />
     </modules>
   </component>

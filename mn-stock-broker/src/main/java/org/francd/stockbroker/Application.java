@@ -1,4 +1,4 @@
-package org.francd;
+package org.francd.stockbroker;
 
 import io.micronaut.runtime.Micronaut;
 

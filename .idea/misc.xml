@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/mn-quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/mn-stock-broker/mn-stock-broker/pom.xml" />
+        <option value="$PROJECT_DIR$/mn-stock-broker/pom.xml" />
       </list>
     </option>
   </component>
