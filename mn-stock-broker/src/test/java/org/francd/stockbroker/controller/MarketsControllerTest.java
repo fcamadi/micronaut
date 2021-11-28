@@ -6,8 +6,10 @@ import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @MicronautTest
@@ -21,10 +23,11 @@ class MarketsControllerTest {
 
     @Test
     void getAllMarketsRespondsWithProperContentAndStatusCode() {
-        var response = httpClient.toBlocking().retrieve("/markets/v1", List.class);
-        assertEquals(7,response.size());
+        List<LinkedHashMap<String,String>> result = httpClient.toBlocking().retrieve("/markets/v1", List.class);
+        assertEquals(7,result.size());
+        assertThat(result)
+                .extracting(entry -> entry.get("value"))
+                .containsExactlyInAnyOrder("AAPL","AMZN","FB","GOOG","MSFT","NFLX","TSLA");
     }
-
-
 
 }
