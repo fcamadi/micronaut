@@ -20,7 +20,7 @@ public class InMemoryStore {
     */
 
     public InMemoryStore() {
-        this.symbolList = Stream.of("AAPL","AMZN","FB","GOOG","MSFT","NFLX","TSLA")
+        symbolList = Stream.of("AAPL","AMZN","FB","GOOG","MSFT","NFLX","TSLA")
                 .map(Symbol::new).collect(Collectors.toList());
     }
 

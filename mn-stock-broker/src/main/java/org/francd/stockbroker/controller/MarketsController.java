@@ -5,7 +5,6 @@ import io.micronaut.http.annotation.Get;
 import org.francd.stockbroker.infrasctructure.InMemoryStore;
 import org.francd.stockbroker.model.Symbol;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller("/markets/v1")
